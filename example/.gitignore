@@ -39,3 +39,8 @@ build/
 .android/
 .ios/
 .flutter-plugins
+/.metadata
+/.packages
+/example.iml
+/example_android.iml
+/pubspec.lock
