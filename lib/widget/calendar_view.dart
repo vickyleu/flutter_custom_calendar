@@ -181,6 +181,7 @@ class CalendarContainerState extends State<CalendarContainer>
       child: new Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           /**
            * 利用const，避免每次setState都会刷新到这顶部的view
