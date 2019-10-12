@@ -194,7 +194,7 @@ class CalendarContainerState extends State<CalendarContainer>
               height: expand ? totalHeight : itemHeight,
               child: IndexedStack(
                 alignment: Alignment.topCenter,
-                sizing:StackFit.expand,
+                sizing: StackFit.expand,
                 index: index,
                 children: widgets,
               )),

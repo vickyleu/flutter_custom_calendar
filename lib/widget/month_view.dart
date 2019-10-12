@@ -86,7 +86,9 @@ class _MonthViewState extends State<MonthView>
     itemHeight = MediaQuery.of(context).size.width / 7;
     totalHeight = itemHeight * lineCount + mainSpacing * (lineCount - 1);
 
-    return Container(height: totalHeight, child: getView());
+    return Container(
+        color: Colors.yellowAccent,
+        height: totalHeight, child: getView());
   }
 
   Widget getView() {
