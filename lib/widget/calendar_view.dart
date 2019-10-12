@@ -186,8 +186,12 @@ class CalendarContainerState extends State<CalendarContainer>
           /**
            * 利用const，避免每次setState都会刷新到这顶部的view
            */
-          calendarProvider.calendarConfiguration.weekBarItemWidgetBuilder(),
+          Container(
+            alignment: Alignment.topCenter,
+            child:calendarProvider.calendarConfiguration.weekBarItemWidgetBuilder() ,
+          ),
           AnimatedContainer(
+            alignment: Alignment.topCenter,
               duration: Duration(milliseconds: 500),
               height: expand ? totalHeight : itemHeight,
               child: IndexedStack(
