@@ -87,8 +87,7 @@ class _MonthViewState extends State<MonthView>
     totalHeight = itemHeight * lineCount + mainSpacing * (lineCount - 1);
 
     return Container(
-        color: Colors.yellowAccent,
-        height: totalHeight, child: getView());
+        color: Colors.yellowAccent, height: totalHeight, child: getView());
   }
 
   Widget getView() {
@@ -99,6 +98,8 @@ class _MonthViewState extends State<MonthView>
 
     return new GridView.builder(
         physics: NeverScrollableScrollPhysics(),
+        shrinkWrap: true,
+        padding: EdgeInsets.zero,
         gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 7, mainAxisSpacing: 10),
         itemCount: 7 * lineCount,
@@ -118,7 +119,6 @@ class _MonthViewState extends State<MonthView>
               dateModel.isSelected = false;
             }
           }
-
           return ItemContainer(
             dateModel: dateModel,
 //            configuration: configuration,
