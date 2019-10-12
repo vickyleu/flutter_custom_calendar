@@ -18,6 +18,7 @@ class MonthView extends StatefulWidget {
   final int year;
   final int month;
   final int day;
+  final double mainSpacing;
 
   final CalendarConfiguration configuration;
 
@@ -26,10 +27,11 @@ class MonthView extends StatefulWidget {
     @required this.month,
     this.day,
     this.configuration,
+    this.mainSpacing
   });
 
   @override
-  _MonthViewState createState() => _MonthViewState();
+  _MonthViewState createState() => _MonthViewState(this.mainSpacing);
 }
 
 class _MonthViewState extends State<MonthView>
@@ -38,9 +40,11 @@ class _MonthViewState extends State<MonthView>
 
   int lineCount;
 
+  _MonthViewState(this.mainSpacing);
+
   double itemHeight;
   double totalHeight;
-  double mainSpacing = 10;
+  double mainSpacing;
 
   DateModel minSelectDate;
   DateModel maxSelectDate;

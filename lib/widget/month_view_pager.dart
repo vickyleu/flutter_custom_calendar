@@ -102,10 +102,10 @@ class _MonthViewPagerState extends State<MonthViewPager> {
       itemBuilder: (context, index) {
         final DateModel dateModel = configuration.monthList[index];
         return new MonthView(
-          configuration: configuration,
-          year: dateModel.year,
-          month: dateModel.month,
-        );
+            configuration: configuration,
+            year: dateModel.year,
+            month: dateModel.month,
+            mainSpacing: configuration.verticalSpacing);
       },
       itemCount: configuration.monthList.length,
     );
