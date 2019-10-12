@@ -193,6 +193,8 @@ class CalendarContainerState extends State<CalendarContainer>
               duration: Duration(milliseconds: 500),
               height: expand ? totalHeight : itemHeight,
               child: IndexedStack(
+                alignment: Alignment.topCenter,
+                sizing:StackFit.expand,
                 index: index,
                 children: widgets,
               )),
